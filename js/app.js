@@ -29,6 +29,14 @@ function renderCalendar() {
         let emptyDiv = document.createElement("div");
         emptyDiv.classList.add("empty-day");
         emptyDiv.innerText = prevLastDate - (firstDay - 1) + i;
+        
+        
+        let img = document.createElement("img");
+        img.src = "path/to/your/image.jpg"; 
+        img.alt = "Calendar Image";
+        img.classList.add("calendar-image");
+        emptyDiv.appendChild(img);
+        
         daysContainer.appendChild(emptyDiv);
         daysAdded++;
     }
@@ -37,6 +45,14 @@ function renderCalendar() {
         let dayDiv = document.createElement("div");
         dayDiv.classList.add("day");
         dayDiv.innerText = day;
+        
+        
+        let img = document.createElement("img");
+        img.src = "path/to/your/image.jpg"; 
+        img.alt = "Calendar Image";
+        img.classList.add("calendar-image");
+        dayDiv.appendChild(img);
+        
         daysContainer.appendChild(dayDiv);
         daysAdded++;
     }
@@ -46,12 +62,19 @@ function renderCalendar() {
         let emptyDiv = document.createElement("div");
         emptyDiv.classList.add("empty-day");
         emptyDiv.innerText = nextMonthDay;
+        
+        
+        let img = document.createElement("img");
+        img.src = "path/to/your/image.jpg"; 
+        img.alt = "Calendar Image";
+        img.classList.add("calendar-image");
+        emptyDiv.appendChild(img);
+        
         daysContainer.appendChild(emptyDiv);
         daysAdded++;
         nextMonthDay++;
     }
 }
-
 function prevMonth() {
     currentDate.setMonth(currentDate.getMonth() - 1);
     renderCalendar();
